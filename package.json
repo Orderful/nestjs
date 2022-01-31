@@ -42,8 +42,7 @@
     "rimraf": "^2.6.3",
     "supertest": "^6.1.6",
     "ts-jest": "^27.1.1",
-    "typescript": "^4.5.2",
-    "yarn": "^1.22.17"
+    "typescript": "^4.5.2"
   },
   "scripts": {
     "commit": "yarn run git-cz",
@@ -58,7 +57,7 @@
     "test:ci": "jest --coverage --coverageReporters=cobertura --coverageReporters=html",
     "lint": "eslint --ext ts .",
     "contributors:generate": "all-contributors generate",
-    "install": "npx lerna run build --ignore rabbitmq-integration"
+    "install": "lerna run build --ignore rabbitmq-integration"
   },
   "lint-staged": {
     "*.ts": [
