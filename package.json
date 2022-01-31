@@ -42,7 +42,8 @@
     "rimraf": "^2.6.3",
     "supertest": "^6.1.6",
     "ts-jest": "^27.1.1",
-    "typescript": "^4.5.2"
+    "typescript": "^4.5.2",
+    "yarn": "^1.22.17"
   },
   "scripts": {
     "commit": "yarn run git-cz",
@@ -56,13 +57,8 @@
     "test:ci:integration": "NODE_ENV=ci jest --config ./jest-e2e.json --forceExit",
     "test:ci": "jest --coverage --coverageReporters=cobertura --coverageReporters=html",
     "lint": "eslint --ext ts .",
-    "contributors:generate": "all-contributors generate"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "contributors:generate": "all-contributors generate",
+    "install": "lerna run build --ignore rabbitmq-integration"
   },
   "lint-staged": {
     "*.ts": [
