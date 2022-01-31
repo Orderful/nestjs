@@ -57,7 +57,7 @@
     "test:ci": "jest --coverage --coverageReporters=cobertura --coverageReporters=html",
     "lint": "eslint --ext ts .",
     "contributors:generate": "all-contributors generate",
-    "install": "npx lerna run build --ignore rabbitmq-integration"
+    "install": "npx tsc --build packages/rabbitmq/tsconfig.build.json"
   },
   "lint-staged": {
     "*.ts": [
